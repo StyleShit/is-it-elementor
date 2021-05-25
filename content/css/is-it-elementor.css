@@ -1,0 +1,43 @@
+:root 
+{
+	--iie-primary-color: #92003b;
+}
+
+.is-it-elementor--loader
+{
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	border-radius: 100%;
+	border: 3px solid var( --iie-primary-color );
+	border-top-color: transparent;
+	margin-inline-start: 5px;
+	animation: spin .3s linear infinite;
+}
+
+.is-it-elementor--badge-v,
+.is-it-elementor--badge-x
+{
+	display: inline-block;
+	background-size: cover;
+	height: 1.5em;
+	width: 1.5em;
+	margin-inline-start: 5px;
+}
+
+.is-it-elementor--badge-v
+{
+	background-image: url( '../img/badge-v.png' );
+}
+
+.is-it-elementor--badge-x
+{
+	background-image: url( '../img/badge-x.png' );
+}
+
+
+@keyframes spin
+{
+	from { transform: rotate( 0 ); }
+	to { transform: rotate( 360deg ); }
+}
