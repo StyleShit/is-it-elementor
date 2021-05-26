@@ -142,7 +142,7 @@ class IsItElementor
                 this.removeBadge( link );
                 this.addLoader( link );
 
-                fetch( URL ).then( res => res.text() ).then( HTML => {
+                chrome.runtime.sendMessage( { action: 'fetchURL', URL }, ( HTML ) => {
                     this.removeLoader( link );
                     this.addBadge( link, this.isElementor( HTML ) );
                 } );
