@@ -27,14 +27,29 @@
 
 .is-it-elementor--badge-v
 {
-	background-image: url( '../img/badge-v.png' );
+	background-image: url( 'chrome-extension://__MSG_@@extension_id__/content/img/badge-v.png' );
 }
 
 .is-it-elementor--badge-x
 {
-	background-image: url( '../img/badge-x.png' );
+	background-image: url( 'chrome-extension://__MSG_@@extension_id__/content/img/badge-x.png' );
 }
 
+/*
+	Hack to target only firefox.
+*/
+@supports ( -moz-appearance: none )
+{
+	.is-it-elementor--badge-v
+	{
+		background-image: url( '../img/badge-v.png' );
+	}
+
+	.is-it-elementor--badge-x
+	{
+		background-image: url( '../img/badge-x.png' );
+	}
+}
 
 @keyframes spin
 {
