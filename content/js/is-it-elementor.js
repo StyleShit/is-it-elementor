@@ -1,16 +1,6 @@
 class IsItElementor
 {
 
-    classes = {
-        loader: 'is-it-elementor--loader',
-        badgeV: 'is-it-elementor--badge-v',
-        badgeX: 'is-it-elementor--badge-x',
-    };
-
-    selectors = {
-        googleSearchLinks: '#search a[data-ved]:not( [class] )',
-    };
-
     /**
      * Get the elements from the page using `this.selectors`.
      * 
@@ -157,6 +147,16 @@ class IsItElementor
      */
     constructor()
     {
+        this.classes = {
+            loader: 'is-it-elementor--loader',
+            badgeV: 'is-it-elementor--badge-v',
+            badgeX: 'is-it-elementor--badge-x',
+        };
+    
+        this.selectors = {
+            googleSearchLinks: '#search a[data-ved]:not( [class] )',
+        };
+
         const { googleSearchLinks } = this.getDefaultElements();
         this.checkLinks( googleSearchLinks );
     }
